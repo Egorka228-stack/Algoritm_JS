@@ -19,49 +19,71 @@
 // const result2 = isFirstElementOfArray(arr, num2);
 
 
-const user1 = {
-    id: 1,
-    name: 'Jahn',
-    lastName:'Niklas'
+// const user1 = {
+//     id: 1,
+//     name: 'Jahn',
+//     lastName:'Niklas'
+// }
+
+// const user2 = {
+//     id: 2,
+//     name: 'Yehor',
+//     lastName:'Melnik'
+// }
+
+// const user3 = {
+//     id: 3,
+//     name: 'Anton',
+//     lastName:'Marcowich'
+// }
+
+// const jahnMessages = [
+//     'Hi.',
+//     'Who are you?.',
+//     'Bye.'
+// ]
+
+// const yehorMessages = [
+//     'Намастэ.',
+//     'pricol.',
+//     '(-_-)'
+// ]
+
+
+// const antonMessages = [
+//     'Guten Tag.',
+//     'Wie gehts?',
+//     'Auf Wiedersehen.'
+// ]
+
+// const map = new Map();
+// map.set(user1.id, jahnMessages);
+// map.set(user2.id, yehorMessages);
+// map.set(user3.id, antonMessages);
+
+
+// function userMassege(id){
+//     return map.get(id);
+// }
+
+
+function factorial(x) 
+{ 
+  if (x === 0){
+    return 1;
+ }else if(x < 0)  {
+     throw new RangeError('Факториал отрицательных чисел не существует')
+} else{return x * factorial(x-1);}
+ 
 }
 
-const user2 = {
-    id: 2,
-    name: 'Yehor',
-    lastName:'Melnik'
-}
 
-const user3 = {
-    id: 3,
-    name: 'Anton',
-    lastName:'Marcowich'
-}
-
-const jahnMessages = [
-    'Hi.',
-    'Who are you?.',
-    'Bye.'
-]
-
-const yehorMessages = [
-    'Намастэ.',
-    'pricol.',
-    '(-_-)'
-]
-
-
-const antonMessages = [
-    'Guten Tag.',
-    'Wie gehts?',
-    'Auf Wiedersehen.'
-]
-
-const map = new Map();
-map.set(user1.id, jahnMessages);
-map.set(user2.id, yehorMessages);
-map.set(user3.id, antonMessages);
-
-
-function userMassege(id){
-    return map.get(id);
-}
+  function toPower(number = 5, exp = 2){
+      if (exp === 1){
+          return number;
+      }else if (exp > 1){
+          return number * toPower(number, exp - 1)
+        } else if (exp < 0){
+            return 1 / (number * toPower(number , Math.abs(exp) - 1 ))
+        }
+  }
